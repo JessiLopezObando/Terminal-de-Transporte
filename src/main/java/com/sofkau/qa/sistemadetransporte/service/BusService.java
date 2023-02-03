@@ -13,7 +13,6 @@ public class BusService extends AbBus{
     private List<Bus> listaBuses = new ArrayList<>();
     @Override
     public Bus crearBus(Bus bus) {
-        bus.setPlaca((long) (listaBuses.size() + 1));
         listaBuses.add(bus);
         return bus;
     }

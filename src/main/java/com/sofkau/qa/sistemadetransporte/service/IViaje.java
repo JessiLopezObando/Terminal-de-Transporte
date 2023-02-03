@@ -10,6 +10,6 @@ public interface IViaje {
     Viaje crearViaje(Viaje viaje);
     List<Viaje> obtenerListaViajes();
     Viaje obtenerViaje(int id);
-    Viaje actualizarViaje(Viaje viaje);
+    Viaje actualizarViaje(Viaje viaje, int id);
     void eliminarViaje(int id);
 }
