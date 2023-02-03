@@ -20,9 +20,7 @@ En la api solo se utilizó stream.
 
 **3. Aplicar patrones de diseño, identificar al menos 2 en tu código al final a la hora de documentar.**
 
-Identifiqué el patron de diseño Mediator, puesto que es un patrón de diseño de comportamiento que permite reducir las dependencias caóticas entre objetos. El patrón restringe las comunicaciones directas entre los objetos, forzándolos a colaborar únicamente a través de un objeto mediador, el mediator seria la terminal, puesto que no pueden interactuar entre si por si solos los objetos, dependen del mediator Terminal - ViajeService.
-
-Tambien identifiqué el patron Facade que es un patrón de diseño estructural que proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases. Un facade es una clase que proporciona una interfaz simple a un subsistema complejo que contiene muchas partes móviles. Un facade puede proporcionar una funcionalidad limitada en comparación con trabajar directamente con el subsistema. Sin embargo, tan solo incluye las funciones realmente importantes para los clientes.
+Identifiqué el patron Facade que es un patrón de diseño estructural que proporciona una interfaz simplificada a una biblioteca, un framework o cualquier otro grupo complejo de clases. Un facade es una clase que proporciona una interfaz simple a un subsistema complejo que contiene muchas partes móviles. Un facade puede proporcionar una funcionalidad limitada en comparación con trabajar directamente con el subsistema. Sin embargo, tan solo incluye las funciones realmente importantes para los clientes.
 
 **4. Desarrollar el proyecto bajo una estructura adecuada y por capas (Controller, Service y repository)**
 Se utilizaron las siguientes capas Controller, Service, Repository, model
