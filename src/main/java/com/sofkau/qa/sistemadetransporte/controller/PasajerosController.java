@@ -20,18 +20,18 @@ public class PasajerosController {
 
         @GetMapping("trae/todos")
         public ResponseEntity obtenerPasajeros(){
-        return new ResponseEntity(iPasajero.obtenerListaPasajeros(), HttpStatus.FOUND);
+        return new ResponseEntity(iPasajero.obtenerListaPasajeros(), HttpStatus.OK);
         }
 
         @GetMapping("/{id}")
-        public Pasajero obtenerPasajeroPorIdId(@PathVariable Long id){
-                return iPasajero.obtenerPasajero(id);
+        public ResponseEntity obtenerPasajeroPorIdId(@PathVariable Long id){
+                return new ResponseEntity(iPasajero.obtenerPasajero(id),HttpStatus.OK);
         }
 
         @PostMapping
         public ResponseEntity agregarPasajero(@RequestBody Pasajero pasajeros){
             iPasajero.crearPasajero(pasajeros);
-            return new ResponseEntity(HttpStatus.ACCEPTED);
+            return new ResponseEntity(HttpStatus.CREATED);
         }
 
         @PutMapping("/{id}")
@@ -40,7 +40,8 @@ public class PasajerosController {
         }
 
         @DeleteMapping("/{id}")
-        public void eliminarPasajero(@PathVariable Long id) {
+        public ResponseEntity eliminarPasajero(@PathVariable Long id) {
                 iPasajero.eliminarPasajero(id);
+                return new ResponseEntity(HttpStatus.ACCEPTED);
         }
 }

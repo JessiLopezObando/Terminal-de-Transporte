@@ -17,18 +17,18 @@ public class DestinoController {
 
     @GetMapping("trae/todos")
     public ResponseEntity obtenerBuses(){
-        return new ResponseEntity(destinoService.obtenerDestinos(), HttpStatus.FOUND);
+        return new ResponseEntity(destinoService.obtenerDestinos(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    public Destino obtenerDestinoPorIdId(@PathVariable Long id){
-        return destinoService.obtenerDestino(id);
+    public ResponseEntity obtenerDestinoPorIdId(@PathVariable Long id){
+        return new ResponseEntity(destinoService.obtenerDestino(id),HttpStatus.OK);
     }
 
     @PostMapping
     public ResponseEntity agregarDestino(@RequestBody Destino destino){
         destinoService.crearDestino(destino);
-        return new ResponseEntity(HttpStatus.ACCEPTED);
+        return new ResponseEntity(HttpStatus.CREATED);
     }
 
 }

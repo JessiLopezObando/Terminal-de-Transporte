@@ -18,7 +18,7 @@ public class BusController {
 
     @GetMapping("trae/todos")
     public ResponseEntity obtenerBuses(){
-        return new ResponseEntity(busService.obtenerBuses(), HttpStatus.FOUND);
+        return new ResponseEntity(busService.obtenerBuses(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -29,7 +29,7 @@ public class BusController {
     @PostMapping
     public ResponseEntity agregarBus(@RequestBody Bus bus){
         busService.crearBus(bus);
-        return new ResponseEntity(HttpStatus.ACCEPTED);
+        return new ResponseEntity(HttpStatus.CREATED);
     }
 
 
